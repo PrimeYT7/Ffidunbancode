@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Code</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; padding: 50px;">
+    <h1>Verification Complete</h1>
+    <p>Your code is:</p>
+    <h2 id="code" style="color: #2c3e50; background: #ecf0f1; padding: 15px; border-radius: 8px;">LOADING...</h2>
+    <p>Copy this code and send it to the bot.</p>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        document.getElementById('code').innerText = code || 'NO CODE FOUND';
+    </script>
+</body>
+</html>
